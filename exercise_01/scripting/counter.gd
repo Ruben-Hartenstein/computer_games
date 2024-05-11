@@ -2,7 +2,8 @@
 
 extends Panel
 
-# Declare the child nodes
+# Declare the nodes
+var panel
 var label
 var button
 
@@ -11,10 +12,24 @@ var elapsed_time = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Get the label and button nodes
-	label = $Label
-	button = $Button
-
+	
+	# Create the panel
+	panel = Panel.new()
+	panel.size = Vector2(200, 200)
+	self.add_child(panel)
+	
+	# Create the label
+	label = Label.new()
+	label.size = Vector2(200, 40)
+	label.position = Vector2(0, (panel.size.y - label.size.y) / 2)
+	panel.add_child(label)
+	
+	# Create the button
+	button = Button.new()
+	button.size = Vector2(100, 40)
+	button.position = Vector2(50, 120) 
+	panel.add_child(button)
+	
 	# Update the text of the label
 	label.text = "Hello!"
 	
