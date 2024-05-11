@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://brerp2563jtt5"]
+
+[ext_resource type="Script" path="res://panel.gd" id="1_m0xje"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 500.0
+offset_bottom = 200.0
+script = ExtResource("1_m0xje")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 10.0
+offset_right = 350.0
+offset_bottom = 60.0
+horizontal_alignment = 1
+vertical_alignment = 1
